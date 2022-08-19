@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+/*Estilos generales*/
+.titulos-generales {
+    color: #84a98c;
+    font-size: 2em;
+    text-align: center;
+    padding: 1em;
+}
+
+.subtitulos-generales {
+    color: #84a98c;
+    font-size: 22px;
+}
+
+.texto {
+    color: #eaf4f4;
+    font-size: 18px;
+}
+
+/*Grid Layout para Index*/
+#body-grid {
+    display: grid;
+    grid-template-rows: 0.2fr auto auto 0.3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "maingrid"
+                         "maingrid"
+                         "footer";
+    background-color: #6b9080;                
+}
+
+#main-grid {
+    grid-area: maingrid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1.5fr;
+    grid-template-areas: "main1"
+                         "main2";
+}
+
+#main1 {
+    grid-area: main1;
+}
+
+#main2 {
+    grid-area: main2;
+}
+
+/*Grid Layout para Pages*/
+body {
+    display: grid;
+    grid-template-rows: 0.2fr auto 0.3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+    background-color: #6b9080;     
+}
+
+main {
+    grid-area: main;
+}
+
+/*Estilos para el header*/
+header {
+    background-color: #6b9080;
+    height: 5.5em;
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+nav {
+    background-color: #6b9080;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+nav .logo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li{
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+    color: #111;
+    background: #fff;
+}
+
+nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+/*Estilos para el footer*/
+footer {
+    background-color: #6b9080;
+    grid-area: footer;
+}
+
+footer p {
+    color: #2f3e46;
+    font-weight: 500;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Estilos para la página "index"*/
+.reposteria-candela {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 3em;
+    background-color: #eaf4f4;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
+    background-attachment: fixed;
+
+}
+
+.reposteria-candela h1, p {
+    color: #eaf4f4;
+}
+
+.categorias {
+    background-color: #a4c3b2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+.categorias-card {
+    width: 17em;
+    height: 17em;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 2.5em;
+    padding-bottom: 2em;
+}
+
+.categorias-card img {
+    width: 17em;
+    height: 12em;
+    transition: 0.5s;
+    padding: 0.3em;
+}
+
+.categorias-card img:hover {
+    transition: 0.5s;
+    filter:brightness(0.8);
+}
+
+.categorias-card a, h4 {
+    color:#2f3e46;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.categorias-card a, h4:active {
+    text-decoration: none;
+    
+}
+
+.categorias-card a, h4:hover {
+    color:#6b9080;
+    transition: 0.5s;
+}
+
+/*Estilos para la página "nosotros"*/
+.about-us {
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
+    padding: 10px;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about-us-video iframe{
+    transition: 0.3s;
+}
+
+/*Estilos para la página "productos"*/
+#productos {
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.productos-card img{
+    height: 15em;
+    width: 20em;
+    padding: 1em;
+    margin: auto;
+    display: block;
+}
+
+.productos-card h4 {
+    color: #84a98c;
+    font-size: 22px;    
+    text-align: center;
+    margin: 1em;
+}
+
+.productos-card p {
+    text-align: center;
+}
+
+/*Estilos para la página "ubicación"*/
+.map{
+    width: 100%;
+    height: 35em;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
+    background-attachment: fixed;
+}
+
+.map-iframe {
+    width: 100%;
+    max-width: 50em;
+    height: 27em;
+    display: block;
+    margin: auto;
+}
+
+/*Estilos para la página "contacto"*/
+.formulario {
+    width: 100%;
+    background: url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
+    background-attachment: fixed;
+}
+
+.formulario .form {
+    background: rgba(0,0,0,.6);
+    width: 90%;
+    max-width: 650px;
+    height: 35em;
+    margin: auto;
+    padding: 5px 35px;
+    border-radius: 3px;
+}
+
+.formulario .form .form-label {
+    color: #cad2c5;
+    display: block;
+    font-size: 16px;
+}
+
+.formulario .form .form-input, .form-textarea {
+    background: rgba(0,0,0,.7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #84a98c;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #eaf4f4;
+}
+
+.formulario .form .form-btn {
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    background: #84a98c;
+    color:#eaf4f4;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.formulario .form .form-btn:hover {
+    background: #6b9080;
+    transition: 0.5s;
+}
+
+.formulario .form .form-btn:active {
+    color:#cce3de;
+    transition: 0.2s;
+}
+
+
+/*Responsive Design*/
+@media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+}
+
+@media (max-width: 920px) { 
+    nav .menu-btn i{
+      display: block;
+    }
+
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+
+    nav ul{
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    #click:checked ~ ul{
+      left: 0;
+    }
+
+    nav ul li{
+      width: 100%;
+      margin: 40px 0;
+    }
+
+    nav ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover{
+      background: none;
+      color: cyan;
+    }
+    .about-us-video iframe{
+        width: 27em;
+        transition: 0.3s;
+    }
+    .about-us-text {
+        margin-top: -5em;
+        transition: 0.3s;
+    }
+  }
+
+@media (max-width: 525px) { 
+    nav .logo{
+        font-size: 30px;
+        transition: 0.3s;
+    }
+    .about-us-video iframe{
+        width: 22em;
+    }
+    .about-us-text {
+        margin-top: -7em;
+        transition: 0.3s;
+    }
+  }
+
+@media (max-width: 405px) { 
+    nav .logo{
+        font-size: 25px;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width: 375px) { 
+    nav .logo{
+        font-size: 22px;
+        transition: 0.3s;
+    }
+    .about-us-video iframe{
+        width: 20em;
+    }
+    .about-us-text {
+        margin-top: -9em;
+        transition: 0.3s;
+    }
+    
+}
